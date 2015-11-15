@@ -26,15 +26,14 @@ body {
 <script> if (!window.jQuery) {    var script = document.createElement('script');    script.src = "jquery.min.js";    document.body.appendChild(script);}</script>
 </head>
 <body>
-<iframe id="iframe" width="100%" name="preview-frame" src="http://wap.koudaitong.com/v2/showcase/homepage?alias=1cs45wrbj" frameborder="0" data-view="fullScreenPreview" class="full-screen-preview__frame" style="height: 624px;"></iframe>
+<iframe id="iframe" width="100%" name="preview-frame" src="http://m.baidu.com" frameborder="0" data-view="fullScreenPreview" class="full-screen-preview__frame" style="height: 624px;"></iframe>
 </iframe>
 </body>
-<script>
-	
+<script>	
       //function to fix height of iframe!
       var calcHeight = function() {
       	alert($(window).height());
-        $('.full-screen-preview__frame').height($(window).height());
+        $('.full-screen-preview__frame').css({'height':(($(window).height()))+'px'});
       }
 
       $(document).ready(function() {
