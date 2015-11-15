@@ -39,35 +39,13 @@ body {
 <script>	
       //function to fix height of iframe!
       var calcHeight = function() {
-
-      	// Assign a variable for the application being used
-		var nVer = navigator.appVersion;
-		// Assign a variable for the device being used
-		var nAgt = navigator.userAgent;
-		var nameOffset,verOffset,ix;
-		
-		
-		// First check to see if the platform is an iPhone or iPod
-		if(navigator.platform == 'iPhone' || navigator.platform == 'iPod'){
-			// In Safari, the true version is after "Safari" 
-			if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
-			  // Set a variable to use later
-			  var mobileSafari = "Safari";
-			}
-		}
-
         $('.full-screen-preview__frame').css({'height':(($(window).height()))+'px'});
 
-        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-		    //alert(navigator.userAgent);  
-		    $('.full-screen-preview__frame').height(window.screen.height); 
-			alert('window height:'+$(window).height()+'device height:'+window.screen.height+'iphone height'+window.screen.availHeight)
+        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { 
+		    $('.full-screen-preview__frame').css({'height':((window.screen.availHeight))+'px'});
 		} else if (/(Android)/i.test(navigator.userAgent)) {
 		    
 		}
-        // if mobileSafari add +60px
-		if(mobileSafari == 'Safari'){ 
-		};
 		
       }
 
